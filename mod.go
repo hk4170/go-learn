@@ -3,5 +3,7 @@ package main
 import "go-learn/lib"
 
 func main(){
-	println(lib.Hello())
+	str := lib.Hello("this go mod demo")
+
+	println(str)
 }
