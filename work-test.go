@@ -1,8 +1,11 @@
 package main
 
-import "lib"
+import (
+	"fmt"
+	"lib"
+)
 
 
 func main(){
-	lib.Hello("nihao")
+	fmt.Println(lib.Hello("nihao"))
 }
