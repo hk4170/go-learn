@@ -17,5 +17,8 @@ func main(){
 	users = append(users, p)
 	users = append(users, p)
 	fmt.Println(users)
-	fmt.Println(users[0])
+
+	for i:=0; i<len(users); i++ {
+		fmt.Println(users[i])
+	}
 }
