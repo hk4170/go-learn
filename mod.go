@@ -1,6 +1,6 @@
 package main
 
-import "go-learn/lib"
+import "lib"
 
 func main(){
 	str := lib.SayHello("this go mod demo")

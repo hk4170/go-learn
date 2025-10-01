@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-
-	"go-learn/lib"
+	"lib"
 )
 
 func main() {
