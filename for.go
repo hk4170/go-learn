@@ -20,7 +20,7 @@ func test2(){
 	//go 写法
 	//for v := range(list){//单个参数只能获取到i
 	//for i,v := range(list){//获取i 跟v 
-	for _,v := range(list){//或者使用此方式获取v
+	for _,v := range list{//或者使用此方式获取v
 		//fmt.Println(i)
 		fmt.Println(v)
 	}
