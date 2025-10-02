@@ -1,0 +1,5 @@
+官方代理
+go env -w GOPROXY=https://proxy.golang.org,direct
+
+腾讯代理
+go env -w GOPROXY=https://mirrors.tencent.com/go/,direct
