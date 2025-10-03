@@ -1,3 +1,6 @@
-test.db
+*.db
 go.work.sum
-person.gob
+*.gob
+*.json
+*.yaml
+*.bin
