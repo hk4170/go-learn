@@ -17,7 +17,7 @@ func main() {
     }
     var hosts []host
 
-    file ,err := os.Open("test.data")
+    file ,err := os.Open("test.db")
     if err != nil{
         log.Fatal(err)
     }

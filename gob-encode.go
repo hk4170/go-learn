@@ -22,7 +22,7 @@ func main(){
 	asd.proxy = "localhost"//首字母必须大写 否则无法访问
 	asd.Proxy = "localhost"
     hosts = append(hosts, asd)
-	file , err := os.Create("test.data")
+	file , err := os.Create("test.db")
 	if err != nil {
 		log.Fatal(err)
 	}
