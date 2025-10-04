@@ -11,10 +11,10 @@ import (
 func main() {
 	// PostgreSQL 连接字符串 DSN
 	// 格式：host=127.0.0.1 port=5432 user=postgres password=123456 dbname=testdb sslmode=disable
-	dsn := "host=localhost port=5432 user=postgres password=123456 dbname=testdb sslmode=disable"
-
+	//dsn := "host=localhost port=5432 user=postgres password=123456 dbname=testdb sslmode=disable"
+    //dsn := "user=postgres dbname=testdb"
 	// 打开数据库连接
-	db, err := sql.Open("postgres", dsn)
+	db, err := sql.Open("postgres", "user=postgres dbname=testdb")
 	if err != nil {
 		log.Fatal("连接数据库失败:", err)
 	}
