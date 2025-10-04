@@ -10,6 +10,8 @@ fmt.Printf
 
 fmt.Fprintf(os.Stdout, "Name: %s\n", "Alice")
 
+格式化字符串 但是不输出
+fmt.Sprintf
 基本语法：
 
 fmt.Printf("格式化字符串", 参数1, 参数2, ...)
@@ -51,7 +53,8 @@ func main() {
 	x := 42
     y := 3.14
     z := "hello"
-    println("打印值跟类型")//不会输出到io
+    println("打印值跟类型")//不会输出到
+
     fmt.Printf("x 的值: %v, 类型: %T\n", x, x)
     fmt.Printf("y 的值: %v, 类型: %T\n", y, y)
     fmt.Printf("z 的值: %v, 类型: %T\n", z, z)
