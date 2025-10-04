@@ -26,11 +26,13 @@ func randomFormat() string {
         "Great to see you, %v!",
         "Hail, %v! Well met!",
     }
-
+    
     // Return a randomly selected message format by specifying
     // a random index for the slice of formats.
     return formats[rand.Intn(len(formats))]
+    
 }
 func main(){
+    fmt.Println(rand.Intn(5))
 	fmt.Println(Hello("nihao"))
 }
