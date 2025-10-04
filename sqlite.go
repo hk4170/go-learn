@@ -18,8 +18,9 @@ func main() {
 
 	// 测试连接（可选）
 	err = db.Ping()
+	//println("test:",err.Error())
 	if err != nil {
-		log.Fatal("无法连接 SQLite:", err)
+		log.Fatal(err)
 	}
 	fmt.Println("✅ 成功连接到 SQLite 数据库！")
 
