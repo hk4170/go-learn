@@ -7,6 +7,9 @@ import (
 )
 
 func main(){
+	if len(os.Args) != 2{
+		log.Fatal("gob-encode <file>")
+	}
 	type host struct {
 		Host string
 		Port int
@@ -22,7 +25,8 @@ func main(){
 	asd.proxy = "localhost"//首字母必须大写 否则无法访问
 	asd.Proxy = "localhost"
     hosts = append(hosts, asd)
-	file , err := os.Create("test.db")
+
+	file , err := os.Create(os.Args[1])
 	if err != nil {
 		log.Fatal(err)
 	}
