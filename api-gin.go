@@ -4,7 +4,6 @@ import (
 	"os"
 )
 
-var apiport = os.Getenv("apiport")
 type Message struct {
 	Text string `json:"text"`
 }
@@ -17,10 +16,12 @@ func api() {
 		// 返回 JSON 响应
 		c.JSON(200, Message{Text: "Hello, 世界！这是 Gin 框架的 Web API"})
 	})
-
+    var apiport string
 	// 启动服务，监听 :8080
-	if apiport == "" {
-		apiport = "8081"
+	if len(os.Args) > 1{
+		apiport = os.Args[1]
+	}else{
+		apiport = "8080"
 	}
 	addr := ":" + apiport
 	r.Run(addr)
