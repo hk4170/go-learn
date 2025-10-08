@@ -1,7 +1,0 @@
-Name: Alice, Age: 30, Height: 1.6
-x 的值: 42, 类型: int
-y 的值: 3.14, 类型: float64
-z 的值: hello, 类型: string
-{Bob 25}
-{Name:Bob Age:25}
-main.Person{Name:"Bob", Age:25}
