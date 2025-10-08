@@ -48,13 +48,20 @@ func getAlbumByID(c *gin.Context) {
     }
     c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
 }
-
+func index(){}
 
 func main(){
 	router := gin.Default()
-    router.GET("/albums", getAlbums)
-    router.GET("/albums/:id", getAlbumByID)
-    router.POST("/albums", postAlbums)
-    router.Run("localhost:8080")
+    router.LoadHTMLGlob("web/*") //加载文件夹
+    router.GET("/", func(c *gin.Context) {
+        // 渲染index.html（参数2为模板文件名，需和目录中一致）
+        c.HTML(200, "index.html", nil)
+    })//无法嵌入文件 
+    router.GET("/api/albums", getAlbums)
+    router.GET("/api/albums/:id", getAlbumByID)
+    router.POST("/api/albums", postAlbums)
+    //router.Run("localhost:8080"
+    router.StaticFS("/dl",gin.Dir("files",true))//true 显示文件夹内容
+    router.Run()
 
 }
