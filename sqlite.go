@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"os"
 	"log"
     _"github.com/mattn/go-sqlite3" // 导入驱动，仅用于注册
 )
@@ -10,9 +11,10 @@ import (
 func main() {
 	// SQLite 不需要服务器，直接打开一个数据库文件
 	// 如果文件不存在，会自动创建
-	db, err := sql.Open("sqlite3", "./test.db") // 当前目录下 test.db 文件
+    filename := os.Args[1]
+	db, err := sql.Open("sqlite3", filename) // 当前目录下 test.db 文件
 	if err != nil {
-		log.Fatal("打开数据库失败:", err)
+		log.Fatal(err)
 	}
 	defer db.Close() // 确保关闭
 
@@ -22,7 +24,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("✅ 成功连接到 SQLite 数据库！")
 
 	// 创建表（如果不存在）
 	_, err = db.Exec(`
