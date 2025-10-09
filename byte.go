@@ -8,7 +8,7 @@ import (
 
 func main() {
     // 读取整个文件为 []byte
-    data, err := os.ReadFile("test.bin") // Go 1.16+ 可用 os.ReadFile
+    data, err := os.ReadFile("test.bin") 
     if err != nil {
         log.Fatal(err)
     }
