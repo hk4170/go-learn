@@ -5,3 +5,5 @@ go.work.sum
 *.yaml
 *.bin
 *.data
+clib.h
+clib.so
