@@ -6,43 +6,41 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type Server struct {
+type Config struct {
 	Host string "yaml: host"
 	Port int "yaml: port"
 	Proxy string "yaml: proxy"
 }
 
-func confRead(configfile string ) Server {
-	var config Server
+var defaultConfig = Config{
+   Host : "localhost",
+   Port : 8080,
+   Proxy: "",
+}
+
+func confRead(configfile string ) Config {
+	var config Config
 	file, err := os.ReadFile(configfile)
     if err != nil {
-        config  = Server{
-			Host: "127.0.0.1",
-			Port: 8080,
-			Proxy: "127.0.0.1:8081",
-		}
-		
+        config  = defaultConfig
     } else{
 		yaml.Unmarshal(file,&config)
 	}
-	yamlData, _ := yaml.Marshal(&config)
-	os.WriteFile(configfile, yamlData, 0644)
 	return config
 }
 
-func confWrite(configfile string, config Server){
-	yamlData, _ := yaml.Marshal(&config)
-	os.WriteFile(configfile, yamlData, 0644)
+func confWrite(configfile string, config Config){
+    yamldata ,_:= yaml.Marshal(&config)
+	os.WriteFile(configfile,yamldata,0644)
+
 }
+
 func main(){
 	conf := confRead("config.yaml")
-	conf.Host = "8.0.0.1"
 	confWrite("config.yaml",conf)
 	println("host:",conf.Host)
 	println("port:",conf.Port)
 	println("proxy:",conf.Proxy)
-
-	
 }
 
 
