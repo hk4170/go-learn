@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"gopkg.in/yaml.v3"
@@ -13,7 +12,7 @@ type Server struct {
 	Proxy string "yaml: proxy"
 }
 
-func config(configfile string ) Server {
+func confRead(configfile string ) Server {
 	var config Server
 	file, err := os.ReadFile(configfile)
     if err != nil {
@@ -30,9 +29,20 @@ func config(configfile string ) Server {
 	os.WriteFile(configfile, yamlData, 0644)
 	return config
 }
+
+func confWrite(configfile string, config Server){
+	yamlData, _ := yaml.Marshal(&config)
+	os.WriteFile(configfile, yamlData, 0644)
+}
 func main(){
-	conf := config("config.yaml")
-	fmt.Println(conf.Host)
+	conf := confRead("config.yaml")
+	conf.Host = "8.0.0.1"
+	confWrite("config.yaml",conf)
+	println("host:",conf.Host)
+	println("port:",conf.Port)
+	println("proxy:",conf.Proxy)
+
+	
 }
 
 
