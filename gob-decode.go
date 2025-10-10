@@ -6,19 +6,20 @@ import (
 	"log"
 	"os"
 )
+type host struct {
+    Host string
+    Os string
+    Os_version string
+    Port int
+    Proxy string 
+    proxy string
+}
+var hosts []host
 
 func main() {
     if len(os.Args) != 2{
         log.Fatalf("gob-decode <file>")
     }
-    type host  struct{
-        Host string
-        Port int
-        proxy string
-        Proxy string
-        Os string
-    }
-    var hosts []host
 
     file ,err := os.Open(os.Args[1])
     if err != nil{
