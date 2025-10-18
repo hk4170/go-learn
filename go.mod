@@ -4,6 +4,7 @@ go 1.25.1
 
 require (
 	fyne.io/fyne/v2 v2.6.3
+	github.com/Ullaakut/nmap v1.0.0
 	github.com/gin-gonic/gin v1.11.0
 	github.com/go-ble/ble v0.0.0-20240122180141-8c5522f54333
 	github.com/go-redis/redis v6.15.9+incompatible
@@ -28,7 +29,6 @@ require (
 	fyne.io/systray v1.11.0 // indirect
 	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/JuulLabs-OSS/cbgo v0.0.1 // indirect
-	github.com/Ullaakut/nmap v1.0.0 // indirect
 	github.com/bytedance/sonic v1.14.0 // indirect
 	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.6 // indirect
