@@ -23,10 +23,15 @@ func main() {
 	if err != nil {
 		log.Fatal("读取 CSV 失败:", err)
 	}
-    fmt.Println(records[0])
-	println(len(records))
+	println("header")
+	header := records[0]
+    fmt.Println(header)
+	
+	println()
 	// 4. 遍历并打印每一行
-	for _, record := range records {
-		fmt.Println(record) // 每行是一个 []string
+	//go无法删除切片内容 只能通过切片操作或者重新创建一个切片
+	data := records[1:] //可通过切片操作删除第一行
+	for _, v := range data {
+		fmt.Println(v) // 每行是一个 []string
 	}
 }
