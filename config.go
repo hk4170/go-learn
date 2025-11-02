@@ -7,9 +7,9 @@ import (
 )
 
 type Config struct {
-	Host string "yaml: host"
-	Port int "yaml: port"
-	Proxy string "yaml: proxy"
+	Host string 
+	Port int 
+	Proxy string 
 }
 
 var defaultConfig = Config{
@@ -30,9 +30,8 @@ func confRead(configfile string ) Config {
 }
 
 func confWrite(configfile string, config Config){
-    yamldata ,_:= yaml.Marshal(&config)
+    yamldata ,_:= yaml.Marshal(config)
 	os.WriteFile(configfile,yamldata,0644)
-
 }
 
 func main(){
