@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 )
-// go build -buildmode=c-shared -o libgo_sum.so clib.go
+// go build -buildmode=c-shared -o clib.so clib.go
 // 注意：//export 必须紧贴函数，中间不能有空行！
 // 功能：接收 C 字符串（逗号分隔的数字），返回计算后的总和（C.int 类型）
 //export CalculateSum
