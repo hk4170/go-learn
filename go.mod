@@ -10,6 +10,7 @@ require (
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/go-sql-driver/mysql v1.9.3
 	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4
+	github.com/leaanthony/clir v1.7.0
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v1.14.32
 	github.com/mitchellh/go-ps v1.0.0
