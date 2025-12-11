@@ -11,7 +11,12 @@ import (
 func main() {
 	// SQLite 不需要服务器，直接打开一个数据库文件
 	// 如果文件不存在，会自动创建
-    filename := os.Args[1]
+	var filename string
+	if len(os.Args) != 2{
+		filename = "test.db"
+	}else{
+        filename = os.Args[1]
+	}
 	db, err := sql.Open("sqlite3", filename) // 当前目录下 test.db 文件
 	if err != nil {
 		log.Fatal(err)
