@@ -120,6 +120,9 @@ github.com/cloudwego/base64x/internal/rt
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
+# github.com/eiannone/keyboard v0.0.0-20220611211555-0d226195f203
+## explicit; go 1.18
+github.com/eiannone/keyboard
 # github.com/fredbi/uri v1.1.1
 ## explicit; go 1.19
 github.com/fredbi/uri

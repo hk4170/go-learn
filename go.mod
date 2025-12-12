@@ -5,6 +5,7 @@ go 1.25.5
 require (
 	fyne.io/fyne/v2 v2.7.1
 	github.com/Ullaakut/nmap v1.0.0
+	github.com/eiannone/keyboard v0.0.0-20220611211555-0d226195f203
 	github.com/gin-gonic/gin v1.11.0
 	github.com/go-ble/ble v0.0.0-20240122180141-8c5522f54333
 	github.com/go-redis/redis v6.15.9+incompatible
