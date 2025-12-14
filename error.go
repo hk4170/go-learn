@@ -1,27 +1,19 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"lib"
-)
+
+func risky() {
+	//定义错误处理函数
+    defer func() {
+		println("处理错误...")
+        if err := recover(); err != nil {
+            println("恢复恐慌",err)
+		}
+    }()
+
+    panic("发生严重错误") // 触发恐慌
+}
 
 func main() {
-	// Set properties of the predefined Logger, including
-	// the log entry prefix and a flag to disable printing
-	// the time, source file, and line number.
-
-	//log.SetPrefix("error demo: ")//设置前缀
-	//log.SetFlags(0) //不显示时间
-
-	// Request a greeting message.
-	message, err := lib.Hello("")
-	// If an error was returned, print it to the console and
-	// exit the program.
-	if err != nil {
-		log.Fatal(err)
-	}
-	// If no error was returned, print the returned message
-	// to the console.
-	fmt.Println(message)
+    risky()
+    println("程序继续运行") // 会执行
 }

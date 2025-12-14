@@ -8,7 +8,7 @@ import (
 
 func main() {
     // 读取整个文件为 []byte
-    data, err := os.ReadFile("config.yaml") 
+    data, err := os.ReadFile("person.gob") 
     if err != nil {
         log.Fatal(err)
     }
