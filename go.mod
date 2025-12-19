@@ -15,6 +15,7 @@ require (
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v1.14.32
 	github.com/mitchellh/go-ps v1.0.0
+	github.com/oschwald/maxminddb-golang v1.13.1
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
 	github.com/progrium/darwinkit v0.5.0
 	github.com/spf13/viper v1.21.0
