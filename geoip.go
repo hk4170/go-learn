@@ -25,14 +25,14 @@ type GeoRecord struct {
 
 func main() {
 	// 1. 打开 MMDB 数据库文件
-	db, err := maxminddb.Open("GeoLite2-City.mmdb")
+	db, err := maxminddb.Open("GeoIP.mmdb")
 	if err != nil {
 		log.Fatalf("打开数据库失败: %v", err)
 	}
 	defer db.Close() // 延迟关闭数据库
 
 	// 2. 待查询的 IP 地址
-	ip := net.ParseIP("8.8.8.8") // 示例 IP：Google DNS
+	ip := net.ParseIP("223.160.229.115") // 示例 IP：Google DNS
 
 	// 3. 初始化结果结构体
 	var record GeoRecord
