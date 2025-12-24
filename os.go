@@ -13,6 +13,8 @@ func main(){
 	fmt.Println(os.Hostname())
 
 	fmt.Println(os.Getwd())
+    
+    fmt.Println(os.Getenv("home"))
 
 	os.Mkdir("test",0777)
 	
