@@ -304,6 +304,9 @@ github.com/json-iterator/go
 # github.com/jsummers/gobmp v0.0.0-20230614200233-a9de23ed2e25
 ## explicit
 github.com/jsummers/gobmp
+# github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
+## explicit
+github.com/kardianos/osext
 # github.com/klauspost/cpuid/v2 v2.3.0
 ## explicit; go 1.22
 github.com/klauspost/cpuid/v2
@@ -441,6 +444,9 @@ github.com/rymdport/portal/settings/appearance
 # github.com/sagikazarmark/locafero v0.11.0
 ## explicit; go 1.23.0
 github.com/sagikazarmark/locafero
+# github.com/sevlyar/go-daemon v0.1.6
+## explicit
+github.com/sevlyar/go-daemon
 # github.com/sirupsen/logrus v1.5.0
 ## explicit; go 1.13
 github.com/sirupsen/logrus
@@ -520,8 +526,8 @@ github.com/yuin/goldmark/renderer
 github.com/yuin/goldmark/renderer/html
 github.com/yuin/goldmark/text
 github.com/yuin/goldmark/util
-# go.uber.org/mock v0.5.0
-## explicit; go 1.22
+# go.uber.org/mock v0.6.0
+## explicit; go 1.23.0
 go.uber.org/mock/mockgen
 go.uber.org/mock/mockgen/model
 # go.yaml.in/yaml/v3 v3.0.4
